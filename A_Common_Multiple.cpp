@@ -1,18 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 int solve(){
-    int n , k;
-    cin>> n>>k;
+    int n ;
+    cin>>n;
     vector<int>a(n);
-    int mul=1;
     for(int i=0;i<n;i++){
         cin>>a[i];
-        mul*=a[i];
     }
-    if(mul%k==0)return 0;
-   for(int i=0;i<n;i++){
-        mul=(mul/a[i])*(a[i]+1)
-   }
+    for(int i=0;i<n;i++){
+        if(is_sorted(a.begin() , a.end()))return n;
+        else {
+            return n-1;
+        }
+    }
     
 }
 

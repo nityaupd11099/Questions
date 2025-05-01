@@ -4,13 +4,20 @@ void solve(){
     int n;
     cin>>n;
     vector<int>a(n);
-    set<int>countt;
-    for(int i=0;i<n;i++)cin>>a[i];
-    int occ;
-    for(int i=0;i<n;i++){
-        countt.insert(a[i]);
+    std::map<int ,int> countt;
+    for (int i = 1; i <= n; ++i) {
+      int x;
+      cin >> x;
+      countt[x]++;
     }
-    cout<< ((countt.size()<=2)?"YES":"NO");
+    if (countt.size() >= 3) puts("No");
+    else {
+      if (abs(countt.begin()->second - countt.rbegin()->second) <= 1) {
+        puts("Yes");
+      } else {
+        puts("No");
+      }
+    }
 }
 
 int main() {
@@ -18,6 +25,5 @@ int main() {
     cin >> t;
     while (t--) {
       solve() ;
-       cout << endl;
     }
 }
