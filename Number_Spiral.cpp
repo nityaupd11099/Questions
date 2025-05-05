@@ -1,7 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-int solve(){
-    
+long long solve(){
+    long long x , y;
+    cin>>x>>y;
+    if(x==1 && y==1)return 1;
+    long long res=pow(y , x)-1;
+    return res;
 }
 
 
@@ -12,16 +16,3 @@ int main() {
        cout <<solve() << endl;
     }
 }
-
-
-#include <bits/stdc++.h>
-using namespace std;
-void solve(){
-    
-}
-
-
-int main() {
-    solve();
-}
-

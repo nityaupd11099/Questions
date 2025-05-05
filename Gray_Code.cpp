@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int solve(){
+void solve(){
     int n;
     cin>>n;
     int total = 1 << n; 
@@ -14,8 +14,5 @@ int solve(){
 
 int main() {
     int t;
-    cin >> t;
-    while (t--) {
-       cout <<solve() << endl;
-    }
+   solve();
 }

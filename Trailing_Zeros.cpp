@@ -7,13 +7,12 @@ int fact(int n){
 void solve(){
     int n;
     cin>>n;
-    string s=fact(n);
+    string s=to_string(fact(n));
     int count=0;
     for(int i=s.size()-1;i>=0 ;i--){
-        if(s[i]==0){
+        if(s[i]==0 && s[i+1]!=0){
             count++;
         }
-        else break;
     }
     cout<<count;
 }

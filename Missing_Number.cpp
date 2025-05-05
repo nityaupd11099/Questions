@@ -1,17 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 void solve(){
-    int n;
+    long long n;
     cin>>n;
-    vector<int>num(n-1);
+    vector<long long>num(n-1);
     for(int i =0;i<n-1;i++)cin>>num[i];
-    int sum=0;
-    int tot_sum=(n*(n+1))/2;
+    long long sum=0;
+    long long tot_sum=(n*(n+1))/2;
     for(int i=0;i<n-1;i++){
         sum+=num[i];
     }
 
-cout<<tot_sum-sum;
+cout<<abs(tot_sum-sum);
 }
 
 
