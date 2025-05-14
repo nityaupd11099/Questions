@@ -12,6 +12,16 @@ int main() {
        cout <<solve() << endl;
     }
 }
+#include <bits/stdc++.h>
+using namespace std;
+int solve(){
+    
+}
+
+
+int main() {
+       cout <<solve() << endl;
+}
 
 
 #include <bits/stdc++.h>

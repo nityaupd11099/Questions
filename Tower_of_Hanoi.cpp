@@ -1,16 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-void solve(int n , char from , char to , char aux , int count){
+void solve(int n , char from , char to , char aux ){
     if(n==1){
-        cout<<count<<endl;
-        cout<<from <<to<<endl;
+        cout<<from <<" "<<to<<endl;
         return;
     }
-    solve(n-1,from , aux , to , count);
-    cout<<n<<from<<to<<endl;
+    solve(n-1,from , aux , to );
+    cout<<from<<" " <<to<<endl;
 
-    solve(n-1,aux,to,from , count);
-    count++;
+    solve(n-1,aux,to,from );
 
 }
 
@@ -18,6 +16,7 @@ void solve(int n , char from , char to , char aux , int count){
 int main() {
     int n;
     cin>>n;
-    int count=0;
-    solve(n , '1' , '3' , '2' ,count);
+    int count=pow(2 , n)-1;
+    cout<<count<<endl;
+    solve(n , '1' , '3' , '2');
 }
