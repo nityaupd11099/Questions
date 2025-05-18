@@ -9,10 +9,13 @@ int solve(){
         cin>>a[i];
         mul*=a[i];
     }
+    int count=0;
     if(mul%k==0)return 0;
    for(int i=0;i<n;i++){
-        mul=(mul/a[i])*(a[i]+1)
+        mul=(mul/a[i])*(a[i]+1);
+        count++;
    }
+   return count;
     
 }
 
